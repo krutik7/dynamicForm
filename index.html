@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS project - 1 (Dynamic Form)</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Fjalla+One&family=Poppins:wght@600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>Dynamic Form</h1>
+    <h2> -- First part -- </h2>
+    <h3>Add Form Controls (Create Form)</h1>
+        <div class="container pb-5 pt-4">
+
+
+            <form action="" class="form">
+
+                <select class="form-select" name="" id="sel">
+
+                    <option value="0" selected>--SELECT--</option>
+                    <option value="1">TEXT</option>
+                    <option value="2">NUMBER</option>
+                    <option value="3">EMAIL</option>
+                    <option value="4">RADIO</option>
+                    <option value="5">CHECKBOX</option>
+                    <option value="6">SELECT (DROPDOWN)</option>
+                    <option value="7">SUBMIT</option>
+
+                </select>
+
+                <button type="button" class="btn" onclick="add_in_la();">ADD</button>
+
+            </form>
+
+            <form action="" class="form-1"></form>
+
+            <div class="final-data"></div>
+
+        </div>
+
+        <script>
+
+            // ---------------------------------- FOR TEXT INPUT FIELD ----------------------------------------------
+
+            // ------------------------ADD--LABEL------------------------------------------------
+
+            var div = document.querySelector(".form"); // main-div
+
+            var outdiv = document.createElement("div"); // parent div of input and label
+
+            outdiv.className = "out-div";
+
+            var input = document.createElement("input"); // --- label-input 
+
+            input.className = "form-control";
+
+            var btn = document.createElement("button"); // ---- add label button
+
+            btn.className = "labbtn";
+
+            var btntext = document.createTextNode("add");
+
+            btn.appendChild(btntext);
+
+            var close_btn1 = document.createElement("button"); // ---- add close button
+
+            close_btn1.className = "close-btn";
+
+            var fafa_close = document.createElement("i"); // fa-fa-icon
+
+            fafa_close.className = "fa fa-times";
+
+            close_btn1.appendChild(fafa_close);
+
+            var label = document.createElement("label"); // --- label
+
+            var labeltext;
+
+            var input1 = document.createElement("input"); // ---main input
+
+            input1.className = "form-control";
+
+
+            // ---------------------------------- FOR NUMBER INPUT FIELD ----------------------------------------------
+
+            var outdiv1 = document.createElement("div"); // parent div of input and label
+
+            outdiv1.className = "out-div";
+
+            var input_n = document.createElement("input"); // --- label-input
+
+            input_n.className = "form-control";
+
+            var btn_n = document.createElement("button"); // ---- add label button
+
+            btn_n.className = "labbtn";
+
+            var btntext = document.createTextNode("add");
+
+            btn_n.appendChild(btntext);
+
+            var close_btn_n = document.createElement("button"); // ---- add close button
+
+            close_btn_n.className = "close-btn";
+
+            var fafa_close = document.createElement("i"); // fa-fa-icon
+
+            fafa_close.className = "fa fa-times";
+
+            close_btn_n.appendChild(fafa_close);
+
+            var input2 = document.createElement("input"); // ---main input
+
+            input2.className = "form-control";
+
+            var label1 = document.createElement("label"); // --- label
+
+            var labeltext1;
+
+            // ---------------------------------- FOR EMAIL INPUT FIELD ----------------------------------------------
+
+            var outdiv2 = document.createElement("div"); // parent div of input and label
+
+            outdiv2.className = "out-div";
+
+            var input_e = document.createElement("input"); // --- label-input
+
+            input_e.className = "form-control";
+
+            var btn_e = document.createElement("button"); // ---- add label button
+
+            btn_e.className = "labbtn";
+
+            var btntext = document.createTextNode("add");
+
+            btn_e.appendChild(btntext);
+
+            var close_btn_e = document.createElement("button"); // ---- add close button
+
+            close_btn_e.className = "close-btn";
+
+            var fafa_close = document.createElement("i"); // fa-fa-icon
+
+            fafa_close.className = "fa fa-times";
+
+            close_btn_e.appendChild(fafa_close);
+
+            var input3 = document.createElement("input"); // ---main input
+
+            input3.className = "form-control";
+
+            var label2 = document.createElement("label"); // --- label
+
+            var labeltext2;
+
+            // ---------------------------------- FOR RDIO INPUT FIELD ----------------------------------------------
+
+            var outdiv3 = document.createElement("div"); // parent div of input and label
+
+            outdiv3.className = "out-div";
+
+            var input_r = document.createElement("input"); // --- label-input
+
+            input_r.className = "form-control";
+
+            var btn_r = document.createElement("button"); // ---- add label button
+
+            btn_r.className = "labbtn";
+
+            var btntext = document.createTextNode("add");
+
+            btn_r.appendChild(btntext);
+
+            var close_btn_r = document.createElement("button"); // ---- add close button
+
+            close_btn_r.className = "close-btn";
+
+            var fafa_close = document.createElement("i"); // fa-fa-icon
+
+            fafa_close.className = "fa fa-times";
+
+            close_btn_r.appendChild(fafa_close);
+
+            var input4 = document.createElement("input"); // ---main input
+
+            input4.className = "form-control";
+
+            var label3 = document.createElement("label"); // --- label
+
+            var labeltext3;
+
+            // ------------------------ADD--radio------------------------------------------------
+
+            var add_radio_btn = document.createElement("button");
+
+            add_radio_btn.className = "add-radio-btn";
+
+            var add_radio_btn_text = document.createTextNode("add");
+
+            add_radio_btn.appendChild(add_radio_btn_text);
+
+            var done_radio_btn = document.createElement("button");
+
+            done_radio_btn.className = "done-radio-btn";
+
+            var done_radio_btn_text = document.createTextNode("done");
+
+            done_radio_btn.appendChild(done_radio_btn_text);
+
+            // ---------------------------------- FOR CHECKBOX INPUT FIELD ----------------------------------------------
+
+            var outdiv4 = document.createElement("div"); // parent div of input and label
+
+            outdiv4.className = "out-div";
+
+            var input_c = document.createElement("input"); // --- label-input
+
+            input_c.className = "form-control";
+
+            var btn_c = document.createElement("button"); // ---- add label button
+
+            btn_c.className = "labbtn";
+
+            var btntext = document.createTextNode("add");
+
+            btn_c.appendChild(btntext);
+
+            var close_btn_c = document.createElement("button"); // ---- add close button
+
+            close_btn_c.className = "close-btn";
+
+            var fafa_close = document.createElement("i"); // fa-fa-icon
+
+            fafa_close.className = "fa fa-times";
+
+            close_btn_c.appendChild(fafa_close);
+
+            var input5 = document.createElement("input"); // ---main input
+
+            input5.className = "form-control";
+
+            var label4 = document.createElement("label"); // --- label
+
+            var labeltext4;
+
+            // ------------------------ADD--CHECKBOX------------------------------------------------
+
+            var add_check_box_btn = document.createElement("button");
+
+            add_check_box_btn.className = "add-radio-btn";
+
+            var add_check_box_btn_text = document.createTextNode("add");
+
+            add_check_box_btn.appendChild(add_check_box_btn_text);
+
+            var done_check_box_btn = document.createElement("button");
+
+            done_check_box_btn.className = "done-radio-btn";
+
+            var done_check_box_btn_text = document.createTextNode("done");
+
+            done_check_box_btn.appendChild(done_check_box_btn_text);
+
+            // ---------------------------------- FOR SELECT-OPTIONS INPUT FIELD ----------------------------------------------
+
+            var outdiv5 = document.createElement("div"); // parent div of input and label
+
+            outdiv5.className = "out-div";
+
+            var input_s = document.createElement("input"); // --- label-input
+
+            input_s.className = "form-control";
+
+            var btn_s = document.createElement("button"); // ---- add label button
+
+            btn_s.className = "labbtn";
+
+            var btntext = document.createTextNode("add");
+
+            btn_s.appendChild(btntext);
+
+            var close_btn_s = document.createElement("button"); // ---- add close button
+
+            close_btn_s.className = "close-btn";
+
+            var fafa_close = document.createElement("i"); // fa-fa-icon
+
+            fafa_close.className = "fa fa-times";
+
+            close_btn_s.appendChild(fafa_close);
+
+            var input6 = document.createElement("input"); // ---main input
+
+            input6.className = "form-control";
+
+            var label5 = document.createElement("label"); // --- label
+
+            var labeltext5;
+
+            // ------------------------ADD--SELECT-OPTIONS-----------------------------------------------
+
+            var add_select_btn = document.createElement("button");
+
+            add_select_btn.className = "add-radio-btn";
+
+            var add_select_btn_text = document.createTextNode("add");
+
+            add_select_btn.appendChild(add_select_btn_text);
+
+            var done_select_btn = document.createElement("button");
+
+            done_select_btn.className = "done-radio-btn";
+
+            var done_select_btn_text = document.createTextNode("done");
+
+            done_select_btn.appendChild(done_select_btn_text);
+
+            // ------------------------ADD-SUBMIT-BUTTON----------------------------------------------
+
+            var outdiv6 = document.createElement("div"); // parent div of input and label
+
+            outdiv6.className = "out-div";
+
+            var submit = document.createElement("button"); // submit button for first part
+
+            submit.type = "button";
+
+            submit.className = "btn btn-1";
+
+            var submit_text = document.createTextNode("SUBMIT");
+
+            submit.appendChild(submit_text);
+
+            var s = document.querySelectorAll("select");
+
+            function add_in_la() {
+
+
+                for (var i = 0; i < s.length; i++) {
+
+                    if (s[i].value == 1) {
+
+                        // ----------------for label------------------------------
+
+                        input.type = "text";
+                        input.placeholder = "Enter label name";
+
+                        // ----------------for input------------------------------
+
+                        input1.type = "text";
+                        input1.placeholder = "Text";
+
+                        outdiv.appendChild(input);
+                        outdiv.appendChild(btn);
+                        outdiv.appendChild(input1);
+                        outdiv.appendChild(close_btn1);
+                        div.appendChild(outdiv);
+
+                    }
+                    else if (s[i].value == 2) {
+
+                        // ----------------for label------------------------------
+
+                        input_n.type = "text";
+                        input_n.placeholder = "Enter label name";
+
+                        // ----------------for input------------------------------
+
+                        input2.type = "NUMBER";
+                        input2.placeholder = "Number";
+
+                        outdiv1.appendChild(input_n);
+                        outdiv1.appendChild(btn_n);
+                        outdiv1.appendChild(input2);
+                        outdiv1.appendChild(close_btn_n);
+                        div.appendChild(outdiv1);
+
+                    }
+                    else if (s[i].value == 3) {
+
+                        // ----------------for label------------------------------
+
+                        input_e.type = "text";
+                        input_e.placeholder = "Enter label name";
+
+                        // ----------------for input------------------------------
+
+                        input3.type = "EMAIL";
+                        input3.placeholder = "Email";
+
+                        outdiv2.appendChild(input_e);
+                        outdiv2.appendChild(btn_e);
+                        outdiv2.appendChild(input3);
+                        outdiv2.appendChild(close_btn_e);
+                        div.appendChild(outdiv2);
+
+                    }
+                    else if (s[i].value == 4) {
+
+                        // ----------------for label------------------------------
+
+                        input_r.type = "text";
+                        input_r.placeholder = "Enter label name";
+
+                        // ----------------for input------------------------------
+
+                        input4.type = "text";
+                        input4.placeholder = "Enter radio value";
+
+                        outdiv3.appendChild(input_r);
+                        outdiv3.appendChild(btn_r);
+                        outdiv3.appendChild(input4);
+                        outdiv3.appendChild(add_radio_btn);
+                        outdiv3.appendChild(done_radio_btn);
+                        outdiv3.appendChild(close_btn_r);
+                        div.appendChild(outdiv3);
+                    }
+                    else if (s[i].value == 5) {
+
+                        // ----------------for label------------------------------
+
+                        input_c.type = "text";
+                        input_c.placeholder = "Enter label name";
+
+                        // ----------------for input------------------------------
+
+                        input5.type = "text";
+                        input5.placeholder = "Enter check-box value";
+
+                        outdiv4.appendChild(input_c);
+                        outdiv4.appendChild(btn_c);
+                        outdiv4.appendChild(input5);
+                        outdiv4.appendChild(add_check_box_btn);
+                        outdiv4.appendChild(done_check_box_btn);
+                        outdiv4.appendChild(close_btn_c);
+                        div.appendChild(outdiv4);
+                    }
+                    else if (s[i].value == 6) {
+
+                        // ----------------for label------------------------------
+
+                        input_s.type = "text";
+                        input_s.placeholder = "Enter label name";
+
+                        // ----------------for input------------------------------
+
+                        input6.type = "text";
+                        input6.placeholder = "Enter option value";
+
+                        outdiv5.appendChild(input_s);
+                        outdiv5.appendChild(btn_s);
+                        outdiv5.appendChild(input6);
+                        outdiv5.appendChild(add_select_btn);
+                        outdiv5.appendChild(done_select_btn);
+                        outdiv5.appendChild(close_btn_s);
+                        div.appendChild(outdiv5);
+                    }
+                    else if (s[i].value == 7) {
+
+                        outdiv6.appendChild(submit);
+                        div.appendChild(outdiv6);
+
+                    }
+                    else {
+                        alert("select at least one option");
+                    }
+
+                }
+
+            }
+
+            // ------------------------------ for adding multiple radio values ---------------------------
+
+            add_radio_btn.addEventListener("click", add_radio);
+
+            add_radio_btn.type = "button";
+
+            var rad;
+
+            function add_radio() {
+
+                var radio_input = document.createElement("input");
+
+                radio_input.className = "radio";
+
+                rad = radio_input;
+
+                var radio_input_text = input4.value;
+
+                var lab = document.createElement("span");
+
+                lab.innerHTML = radio_input_text;
+
+                radio_input.type = "radio";
+
+                radio_input.name = input_r.value;
+
+                radio_input.value = input4.value;
+
+                outdiv3.appendChild(radio_input);
+
+                outdiv3.appendChild(lab);
+
+                input4.value = "";
+
+            }
+
+            // ------------------------------ for adding multiple check-box values ---------------------------
+
+            add_check_box_btn.addEventListener("click", add_chec_kbox);
+
+            add_check_box_btn.type = "button";
+
+            function add_chec_kbox() {
+
+                var check_input = document.createElement("input");
+
+                check_input.className = "radio";
+
+                var check_input_text = input5.value;
+
+                var lab1 = document.createElement("span");
+
+                lab1.innerHTML = check_input_text;
+
+                check_input.type = "checkbox";
+
+                check_input.value = input5.value;
+
+                outdiv4.appendChild(check_input);
+
+                outdiv4.appendChild(lab1);
+
+                input5.value = "";
+
+            }
+
+            // ------------------------------ for adding multiple options values in selct input---------------------------
+
+            add_select_btn.addEventListener("click", add_options);
+
+            add_select_btn.type = "button";
+
+            var select_input = document.createElement("select");
+
+            select_input.className = "form-select";
+
+            function add_options() {
+
+                var selct_option = document.createElement("option");
+
+                selct_option.value = input6.value;
+
+                var selct_option_text = document.createTextNode(input6.value);
+
+                selct_option.appendChild(selct_option_text);
+
+                select_input.appendChild(selct_option);
+
+                input6.value = "";
+
+            }
+
+            // ------------------------------Second form (FILL FORM PART)----------------------------------------------------------------
+
+            var form_fill = document.querySelector(".form-1");
+
+            var outdiv7 = document.createElement("div");
+
+            outdiv7.className = "out-div";
+
+            var b = document.createElement("button");
+
+            b.className = "btn btn-1";
+
+            var btext = document.createTextNode("SUBMIT");
+
+            b.appendChild(btext);
+
+            var h3 = document.querySelector("h3");
+            var h2 = document.querySelector("h2");
+
+            submit.addEventListener("click", fill_submit);
+
+            function fill_submit() {
+
+                // input4.style.display = "none";
+                // input5.style.display = "none";
+                // input6.style.display = "none";
+
+                input4.remove();
+                input5.remove();
+                input6.remove();
+
+                form_fill.className += " form-1-1";
+
+                var outdiv_2 = document.querySelectorAll(".out-div");
+
+                for (let i = 0; i < outdiv_2.length; i++) {
+                    outdiv_2[i].className += " out-div-2";
+                    
+                }
+
+                h3.innerHTML = "FILL FORM";
+                h2.innerHTML = " -- Second part -- ";
+
+                outdiv6.style.display = "none";
+
+                document.querySelector("select").style.display = "none";
+
+                var divb = document.querySelectorAll(".form button");
+
+                for (var i = 0; i < divb.length; i++) {
+                    divb[i].style.display = "none"
+
+                }
+
+                form_fill.innerHTML = div.innerHTML;
+
+                outdiv7.appendChild(b);
+
+                form_fill.appendChild(outdiv7);
+
+                div.remove();
+
+            }
+
+            // ------------------------------third part (your data PART)----------------------------------------------------------------
+
+            var final_data = document.querySelector(".final-data");
+
+            // --------------------------------for text field data------------------------------------------
+
+            var final_div = document.createElement("div");
+
+            final_div.className = "out-div-1";
+
+            var p = document.createElement("p");
+
+            p.className = "p-2";
+
+            var pn = document.createElement("p");
+
+            pn.className = "p-1";
+
+            // --------------------------------for number field data------------------------------------------
+
+            var final_div1 = document.createElement("div");
+
+            final_div1.className = "out-div-1";
+
+            var p_num_lab = document.createElement("p");
+
+            p_num_lab.className = "p-1";
+
+            var p_num_value = document.createElement("p");
+
+            p_num_value.className = "p-2";
+
+            // --------------------------------for number field data------------------------------------------
+
+            var final_div2 = document.createElement("div");
+
+            final_div2.className = "out-div-1";
+
+            var p_in_1 = document.createElement("p");
+
+            p_in_1.className = "p-2";
+
+            var p_lab_1 = document.createElement("p");
+
+            p_lab_1.className = "p-1";
+
+            // --------------------------------for radio field data------------------------------------------
+
+            var final_div3 = document.createElement("div");
+
+            final_div3.className = "out-div-1";
+
+            var p_in_2 = document.createElement("p");
+
+            p_in_2.className = "p-2";
+
+            var p_lab_2 = document.createElement("p");
+
+            p_lab_2.className = "p-1";
+
+            // --------------------------------for checkbox field data------------------------------------------
+
+            var final_div4 = document.createElement("div");
+
+            final_div4.className = "out-div-1";
+
+            var p_in_3 = document.createElement("p");
+
+            p_in_3.className = "p-2";
+
+            var p_lab_3 = document.createElement("p");
+
+            p_lab_3.className = "p-1";
+
+            // --------------------------------for select (options) data------------------------------------------
+
+            var final_div5 = document.createElement("div");
+
+            final_div5.className = "out-div-1";
+
+            var p_in_4 = document.createElement("p");
+
+            p_in_4.className = "p-2";
+
+            var p_lab_4 = document.createElement("p");
+
+            p_lab_4.className = "p-1";
+
+
+            b.type = "button";
+
+            b.onclick = function () {
+
+
+                h3.innerHTML = "YOUR DATA";
+                h2.innerHTML = " -- Final part -- ";
+
+                var form_fill_div = document.querySelectorAll(".form-1 div");
+
+                for (var i = 0; i < form_fill_div.length; i++) {
+                    form_fill_div[i].style.display = "none";
+
+                }
+
+                final_data.innerHTML = form_fill.innerHTML;
+
+                final_data.className += " final-data-1";
+
+                var finalinn = document.querySelectorAll(".form-1 input");
+
+                for (var i = 0; i < finalinn.length; i++) {
+
+                    if (finalinn[i].type === "text") {
+                        if (finalinn[i]) {
+
+                            pn.innerHTML = input.value + " : ";
+                            p.innerHTML = finalinn[i].value;
+
+                            final_div.appendChild(pn);
+
+                            final_div.appendChild(p);
+
+                            final_data.appendChild(final_div);
+                        }
+                    }
+
+                    if (finalinn[i].type === "number") {
+                        if (finalinn[i]) {
+
+                            p_num_lab.innerHTML = input_n.value + " : ";
+                            p_num_value.innerHTML = finalinn[i].value;
+
+                            final_div1.appendChild(p_num_lab);
+
+                            final_div1.appendChild(p_num_value);
+
+                            final_data.appendChild(final_div1);
+                        }
+                    }
+
+                    if (finalinn[i].type === "email") {
+                        if (finalinn[i]) {
+
+                            p_lab_1.innerHTML = input_e.value + " : ";
+                            p_in_1.innerHTML = finalinn[i].value;
+
+                            final_div2.appendChild(p_lab_1);
+
+                            final_div2.appendChild(p_in_1);
+
+                            final_data.appendChild(final_div2);
+                        }
+                    }
+
+                    if (finalinn[i].type === "radio") {
+                        if (finalinn[i].checked) {
+
+                            p_lab_2.innerHTML = input_r.value + " : ";
+                            p_in_2.innerHTML = finalinn[i].value;
+
+                            final_div3.appendChild(p_lab_2);
+
+                            final_div3.appendChild(p_in_2);
+
+                            final_data.appendChild(final_div3);
+
+                        }
+                    }
+
+                    if (finalinn[i].type === "checkbox") {
+                        if (finalinn[i].checked) {
+
+                            p_lab_3.innerHTML = input_c.value + " : ";
+                            p_in_3.innerHTML += finalinn[i].value + ", ";
+
+                            final_div4.appendChild(p_lab_3);
+
+                            final_div4.appendChild(p_in_3);
+
+                            final_data.appendChild(final_div4);
+
+                        }
+                    }
+
+                }
+
+                var final_sel = document.querySelectorAll(".form-1 .out-div select");
+
+                    for (let i = 0; i < final_sel.length; i++) {
+
+                        p_lab_4.innerHTML = input_s.value + " : ";
+                        p_in_4.innerHTML = final_sel[i].value;
+
+                        final_div5.appendChild(p_lab_4);
+
+                        final_div5.appendChild(p_in_4);
+
+                        final_data.appendChild(final_div5);
+
+                }
+
+
+                form_fill.remove();
+
+            }
+
+            //----------------------done button for radio,checkbox and select-----
+
+            done_radio_btn.addEventListener("click", done_radio);
+
+            function done_radio() {
+
+                input4.remove();
+                add_radio_btn.remove();
+                done_radio_btn.remove();
+
+            }
+
+            done_check_box_btn.addEventListener("click", done_check);
+
+            function done_check() {
+
+                input5.remove();
+                add_check_box_btn.remove();
+                done_check_box_btn.remove();
+
+            }
+
+            done_select_btn.addEventListener("click", done_select);
+
+            function done_select() {
+
+                input6.remove();
+                add_select_btn.remove();
+                done_select_btn.remove();
+
+            }
+
+            //--------------------------------------for adding label in first part (converting input value to label)-----
+
+            btn.addEventListener("click", addlabel);
+
+            function addlabel() {
+
+                if (input.value === "") {
+                    alert("Fill the feilds");
+                }
+                else {
+
+                    labeltext = document.createTextNode(input.value + " : ");
+
+                    label.appendChild(labeltext);
+
+                    outdiv.appendChild(label);
+
+                    input.remove();
+
+                    btn.remove();
+
+                }
+
+            }
+
+            btn_n.addEventListener("click", addlabel_n);
+
+            function addlabel_n() {
+                if (input_n.value === "") {
+                    alert("Fill the feilds");
+                }
+                else {
+
+                    labeltext1 = document.createTextNode(input_n.value + " : ");
+
+                    label1.appendChild(labeltext1);
+
+                    outdiv1.appendChild(label1);
+
+                    input_n.remove();
+
+                    btn_n.remove();
+
+                }
+
+            }
+
+            btn_e.addEventListener("click", addlabel_e);
+
+            function addlabel_e() {
+                if (input_e.value === "") {
+                    alert("Fill the feilds");
+                }
+                else {
+
+                    labeltext2 = document.createTextNode(input_e.value + " : ");
+
+                    label2.appendChild(labeltext2);
+
+                    outdiv2.appendChild(label2);
+
+                    input_e.remove();
+
+                    btn_e.remove();
+
+                }
+
+            }
+
+            btn_r.addEventListener("click", addlabel_r);
+
+            function addlabel_r() {
+                if (input_r.value === "") {
+                    alert("Fill the feilds");
+                }
+                else {
+
+                    labeltext3 = document.createTextNode(input_r.value + " : ");
+
+                    label3.appendChild(labeltext3);
+
+                    outdiv3.appendChild(label3);
+
+                    input4.className += " form-control-1";
+
+                    input_r.remove();
+
+                    btn_r.remove();
+
+                }
+
+            }
+
+            btn_c.addEventListener("click", addlabel_c);
+
+            function addlabel_c() {
+                if (input_c.value === "") {
+                    alert("Fill the feilds");
+                }
+                else {
+
+                    labeltext4 = document.createTextNode(input_c.value + " : ");
+
+                    label4.appendChild(labeltext4);
+
+                    outdiv4.appendChild(label4);
+
+                    input5.className += " form-control-1";
+
+                    input_c.remove();
+
+                    btn_c.remove();
+
+                }
+
+            }
+
+            btn_s.addEventListener("click", addlabel_s);
+
+            function addlabel_s() {
+                if (input_s.value === "") {
+                    alert("Fill the feilds");
+                }
+                else {
+
+                    labeltext5 = document.createTextNode(input_s.value + " : ");
+
+                    label5.appendChild(labeltext5);
+
+                    outdiv5.appendChild(label5);
+
+                    input6.className += " form-control-1";
+
+                    outdiv5.appendChild(select_input);
+
+                    select_input.className += " form-select-1";
+
+                    input_s.remove();
+
+                    btn_s.remove();
+
+                }
+
+            }
+
+            //----------------------------- for remove your current entry-----------
+
+            close_btn1.onclick = function () {
+                outdiv.remove();
+            }
+
+            close_btn_n.onclick = function () {
+                outdiv1.remove();
+            }
+
+            close_btn_e.onclick = function () {
+                outdiv2.remove();
+            }
+
+            close_btn_r.onclick = function () {
+                outdiv3.remove();
+            }
+
+            close_btn_c.onclick = function () {
+                outdiv4.remove();
+            }
+
+            close_btn_s.onclick = function () {
+                outdiv5.remove();
+            }
+
+
+        </script>
+
+
+</body>
+
+</html>

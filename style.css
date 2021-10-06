@@ -1,0 +1,254 @@
+body{
+    margin: 0px;
+    padding: 10px 0px 0px 0px;
+    overflow-x: hidden;
+    background-color: darkkhaki;
+    border-top: 5px solid darkcyan;
+    border-bottom: 5px solid darkcyan;
+    border-right: 5px solid cyan;
+    border-left: 5px solid cyan;
+    text-align: center;
+}
+h1,h3,h2{
+    font-family: 'Bebas Neue', cursive;
+}
+span{
+    font-weight: bolder;
+    font-family: 'Poppins';
+    margin: 0px 10px;
+    font-size: 20px;
+}
+.radio{
+    font-size: 50px !important;
+    margin-left: 10px;
+    cursor: pointer !important;
+}
+div, h1, p{
+    margin: 0px;
+    padding: 0px;
+}
+.btn:focus{
+    box-shadow: unset;
+}
+.form-control:focus{
+    box-shadow: unset;
+    border: 3px solid cyan;
+    background-color: darkcyan;
+}
+.out-div{
+    display: flex;
+    margin: 0px 0px;
+    padding: 30px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.089);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+label{
+    font-weight: bolder;
+    font-size: 21px;
+    font-family: 'Otomanopee One', sans-serif;
+    left: 10%;
+    position: absolute;
+}
+.form-control{
+    height: 50px;
+    width: 40%;
+    margin-left: 20px !important;
+    border: 3px solid crimson;
+    border-radius: 100px;
+    background-color: rgb(221, 75, 105);
+    color: white !important;
+    font-weight: bolder;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    padding: 0px 75px 0px 20px;
+}
+.form-control-1{
+    padding: 0px 20px 0px 20px;
+    width: 22%;
+}
+.form-control::placeholder{
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+}
+.form-select:focus{
+    box-shadow: unset;
+    border: 3px solid crimson;
+    background-color: rgb(221, 75, 105);
+}
+.form-select{
+    height: 50px;
+    width: 25%;
+    border: 3px solid cyan;
+    background-color: darkcyan;
+    color: white;
+    font-size: 18px;
+    font-weight: bolder;
+    border-radius: 10px 10px 0px 0px;
+    font-family: 'Poppins', sans-serif;
+    padding: 0px 0px 0px 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+.form-select-1{
+    width: 20% !important;
+}
+.form-select-selected{
+    background-color: black !important;
+}
+.form-select option{
+    font-size: 15px;
+    padding: 0%;
+}
+.btn{
+    width: 6%;
+    background-color: brown;
+    color: white;
+    border: 3px solid rgb(114, 17, 17);
+    border-radius: 100px;
+    font-family: 'Bebas Neue';
+    font-size: 26px;
+    padding: 0px;
+    margin: 0px 20px;
+} 
+.btn-1{
+    width: 10%;
+    
+}
+.add-radio-btn{
+    width: 6%;
+    height: 50px;
+    background-color: darkcyan;
+    color: white;
+    border: 3px solid cyan;
+    border-radius: 100px 0px 0px 100px;
+    font-family: 'Bebas Neue';
+    font-size: 20px;
+    padding: 0px;
+    position: absolute;
+    right: 14%;
+} 
+.done-radio-btn{
+    width: 6%;
+    height: 50px;
+    background-color: darkcyan;
+    color: white;
+    border: 3px solid cyan;
+    border-radius: 0px 100px 100px 0px;
+    font-family: 'Bebas Neue';
+    font-size: 20px;
+    padding: 0px;
+    position: absolute;
+    right: 8%;
+}
+.labbtn{
+    width: 6%;
+    height: 50px;
+    background-color: darkcyan;
+    color: white;
+    border: 3px solid cyan;
+    border-radius: 50px;
+    font-family: 'Bebas Neue';
+    font-size: 20px;
+    margin: 0px 10px ;
+    position: absolute;
+    left: 44%;
+}
+.labbtn:hover{
+    background-color: darkcyan;
+    color: white;
+    border: 3px solid cyan;
+}
+.close-btn{
+    width: 4%;
+    height: 35px;
+    background-color: darkcyan;
+    color: white;
+    border: 3px solid cyan;
+    border-radius: 50px;
+    font-family: 'Bebas Neue';
+    font-size: 19px;
+    margin: 0px 10px ;
+    position: absolute;
+    right: 0%;
+}
+.close-btn:hover{
+    background-color: brown;
+    color: white;
+    border: 3px solid rgb(114, 17, 17);
+}
+.btn:hover{
+    background-color: darkcyan;
+    color: white;
+    border: 3px solid cyan;
+}
+.form-check-label{
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+}
+.final-data-1{
+    background-color: white;
+    padding: 20px;
+    border-radius: 100px 0px;
+    border: 10px solid cyan;
+    box-shadow: 0px 0px 30px cyan;
+    animation: bord 2s infinite;
+}
+@keyframes bord {
+
+    0%{border-color: darkcyan;}
+    0%{box-shadow: 0px 0px 30px darkcyan;}
+    20%{border-color: lightcoral;}
+    20%{box-shadow: 0px 0px 30px lightcoral;}
+    40%{border-color: lightgreen;}
+    40%{box-shadow: 0px 0px 30px lightgreen;}
+    60%{border-color: lightsalmon;}
+    60%{box-shadow: 0px 0px 30px lightsalmon;}
+    80%{border-color: lightseagreen;}
+    80%{box-shadow: 0px 0px 30px lightseagreen;}
+    100%{border-color: lightslategrey;}
+    100%{box-shadow: 0px 0px 30px lightslategrey;}
+}
+.form-1-1{
+    background-color: rgba(114, 17, 17, 0.562);
+    padding: 20px;
+    border-radius: 100px 0px;
+    border: 10px solid cyan;
+    color: white;
+}
+.out-div-2{
+    padding-left: 150px;
+}
+.form-1-1 label{
+    position: absolute;
+    left: 15%;
+}   
+.out-div-1{
+    padding: 40px 0px;
+    display: flex;
+    margin: 0px 0px;
+    border-radius: 100px 0px;
+    border: 2px dashed cyan;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+p{
+    font-weight: bolder;
+    font-size: 28px;
+    margin: 25px;
+    font-family: 'Otomanopee One', sans-serif;
+    color: darkcyan;
+}
+.p-1{
+    position: absolute;
+    left: 25%;
+}
+.p-2{
+    position: absolute;
+    left: 55%;
+}
